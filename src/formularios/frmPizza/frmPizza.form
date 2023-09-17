@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="formularios.frmPizza.aa">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="formularios.frmPizza.frmPizza">
   <grid id="27dc6" binding="borderPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="500" height="486"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -10,27 +10,156 @@
       <component id="16da9" class="javax.swing.JLabel">
         <constraints border-constraint="North"/>
         <properties>
+          <background color="-10855716"/>
+          <horizontalAlignment value="2"/>
           <text value="Pizzería V1"/>
         </properties>
       </component>
       <component id="2c0e2" class="javax.swing.JLabel">
         <constraints border-constraint="South"/>
         <properties>
+          <horizontalAlignment value="4"/>
           <text value="Panel Principal utilizando BorderLayout"/>
         </properties>
       </component>
-      <grid id="6f74f" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="90148" binding="mainPanel" layout-manager="GridLayoutManager" row-count="14" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="Center"/>
         <properties/>
         <border type="none"/>
         <children>
-          <component id="a5737" class="javax.swing.JLabel">
+          <component id="ee2db" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Label"/>
+              <horizontalTextPosition value="11"/>
+              <text value="Selecciona una especialidad:"/>
+            </properties>
+          </component>
+          <component id="d7afa" class="javax.swing.JComboBox" binding="cbEspecialidad">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="31b2e" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Añadir ingredientes:"/>
+            </properties>
+          </component>
+          <component id="5529d" class="javax.swing.JComboBox" binding="cbTopping">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="365d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Ingresa el nombre de la Pizza:"/>
+            </properties>
+          </component>
+          <component id="804dc" class="javax.swing.JButton" binding="btnPreparar">
+            <constraints>
+              <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Preparar"/>
+            </properties>
+          </component>
+          <component id="afe10" class="javax.swing.JList" binding="listaPreparar">
+            <constraints>
+              <grid row="13" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="85816" class="javax.swing.JList" binding="listaIngredientes">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="53afb" class="javax.swing.JTextField" binding="tfNombre">
+            <constraints>
+              <grid row="11" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="85eb9" class="javax.swing.JLabel" binding="lblTotal">
+            <constraints>
+              <grid row="9" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="0.00"/>
+            </properties>
+          </component>
+          <component id="f1b29" class="javax.swing.JButton" binding="btnTopping">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Añadir"/>
+            </properties>
+          </component>
+          <component id="375ad" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Selecciona un tamaño:"/>
+            </properties>
+          </component>
+          <component id="f3623" class="javax.swing.JRadioButton" binding="rbtnSmall">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <selected value="true"/>
+              <text value="Pequeña (Precio Normal)"/>
+            </properties>
+          </component>
+          <component id="d0b47" class="javax.swing.JRadioButton" binding="rbtnMedium">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Mediana (Precio +20%)"/>
+            </properties>
+          </component>
+          <component id="60b65" class="javax.swing.JRadioButton" binding="rbtnBig">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Grande (Precio +35%)"/>
+            </properties>
+          </component>
+          <component id="30080" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Precio Total:"/>
+            </properties>
+          </component>
+          <component id="8bbe6" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="(Remueve ingredientes con doble click)"/>
             </properties>
           </component>
         </children>

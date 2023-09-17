@@ -4,17 +4,28 @@ import pizza.base.Pizza;
 import pizza.base.Topping;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
-public class PizzaHawaiian extends Pizza {
-    private static List<Topping> toppings;
-    public PizzaHawaiian(String name, Topping... toppings) {
+public class PizzaMar extends Pizza {
+    private static List<Topping> toppings = new ArrayList<>();
+    public static double total = 0.0;
+    public PizzaMar(String name, Topping... toppings) {
         super(name, toppings);
     }
 
     public static void precargarTopping(DefaultListModel modeloLista) {
-        toppings.add(new Topping("Albahaca", 2.10));
-        toppings.add(new Topping("Tomates Cherry", 3.30));
-        toppings.add(new Topping("Ajo", 1.25));
+        modeloLista.clear();
+
+        toppings.add(new Topping("Camarones", 5.00));
+        toppings.add(new Topping("Calamares", 4.50));
+        toppings.add(new Topping("Mejillones", 3.80));
+        toppings.add(new Topping("Salsa de Tomate", 1.80));
+
+        // Añadir los toppings al modeloLista
+        for (Topping topping : toppings) {
+            modeloLista.addElement(topping);
+            total += topping.getPrecio();
+        }
     }
 }
